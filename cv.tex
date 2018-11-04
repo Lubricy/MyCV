@@ -1,0 +1,178 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+% if you want to add fontawesome package
+% you need to compile the tex file with LuaLaTeX
+% References:
+%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
+%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
+\usepackage{fontawesome}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.4cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.4cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.2cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.4cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.7,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.7,
+}
+
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{Luke}{Fu}
+      {Software Engineer}
+\begin{flushright}
+\emph{\date}
+\end{flushright}
+      
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \section{Address}
+    Dalian
+    Liaoning, China
+    ~
+  \section{Tel}
+    \faMobile+86 18698609556
+    ~
+  \section{Mail}
+    \faEnvelopeO\href{mailto:lubricy@outlook.com}{\textbf{lubricy}\\@outlook.com}
+    ~
+  \section{Connection}
+    \faTwitter\href{https://twitter.com/LubricyF}{@LubricyF}
+    \faGlobe\href{http://lubricy.cc}{lubricy.cc}
+    \faGithub\href{https://github.com/Lubricy}{Lubricy}
+    ~
+  % use  \hspace{} or \vspace{} to change bubble size, if needed
+  \section{Programming}
+    \smartdiagram[bubble diagram]{
+        \textbf{Python},
+        \textbf{Bash},
+        \textbf{HTML/CSS}\\\textbf{Angular},
+        \textbf{\LaTeX},
+        \textbf{Haskell},
+        \textbf{C/C++},
+        \textbf{Tensorflow}
+    }
+    ~
+  \section{Personal Skills}
+    \smartdiagram[bubble diagram]{
+        \textbf{Team}\\\textbf{Player},
+        \textbf{Initiative},
+        \textbf{Curiosity},
+        \textbf{Problem}\\\textbf{Solving},
+        \textbf{\vspace{2mm}Manage\vspace{2mm}},
+        \textbf{Organize}
+    }
+    ~
+  \section{OS Preference}
+    \textbf{GNU/Linux}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{MacOS}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Unix}\includegraphics[scale=0.40]{img/2stars.png}
+    \textbf{Windows}\includegraphics[scale=0.40]{img/1stars.png}
+    ~
+  \section{Languages}
+    \textbf{Chinese}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{English}\includegraphics[scale=0.40]{img/4stars.png}
+    ~
+\end{aside}
+~
+\section{Experience}
+\begin{entrylist}
+  \entry
+    {Sept'15}{Now}
+    {Software Engineer}
+    {Fidelity Business Services (Dalian) LLC.}
+    {Designing \& developing deep learning solutions for business use cases,
+      developing frontend webpage and backend services. }
+\end{entrylist}
+~
+\section{Project}
+\begin{entrylist}
+  \entry
+    {Jul'18}{Now}
+    {Unstructured data masking system}
+    {Fidelity Business Services (Dalian) LLC.}
+    {Protect sensitive information in unstructured data by detect \& mask them with AI models.\\
+     Python/Tensorflow/NLP }
+  \entry
+    {Jan'18}{Now}
+    {Automated candidate screening system}
+    {Fidelity Business Services (Dalian) LLC.}
+    {Automated screening candidates by analyze CVs with NLP/AI models.\\
+     Python/Tensorflow/NLP}
+  \entry
+    {Apr'17}{Jan'18}
+    {Bank check recognition system}
+    {Fidelity Business Services (Dalian) LLC.}
+    {recognize text information from bank checks with image processing/AI models.\\
+     Python/OpenCV/Tensorflow}
+  \entry
+    {Jul'17}{Oct'17}
+    {Questionare recognition system}
+    {Fidelity Business Services (Dalian) LLC.}
+    {recognize marks from questionares with image processing/AI models.\\
+     Python/OpenCV/Tensorflow}
+  \entry
+    {Jul'16}{Apr'17}
+    {mobile testing hub}
+    {Fidelity Business Services (Dalian) LLC.}
+    {synchonized test automation on IOS/Android mobile devices.\\
+     NodeJS/JavaScript/C++/ObjectiveC/Java}
+  \entry
+    {Sept'15}{Jul'16}
+    {Netbenefits Mobile}
+    {Fidelity Business Services (Dalian) LLC.}
+    {Automated application testing on mobile devices.\\
+     Java/Seleinum}
+\end{entrylist}
+~
+\section{Education}
+\begin{entrylist}
+  \entry
+    {2010}{2014}
+    {Bachelor's Degree in Software Engineering}
+    {Beijing Institute of Technology}
+    {}
+  \entry
+    {2007}{2009}
+    {High School Diploma}
+    {Dalian Yuming High School}
+    {}
+\end{entrylist}
+
+\end{document}
