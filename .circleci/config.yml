@@ -9,6 +9,7 @@ jobs:
                 name: Generating current version
                 command: |
                   mkdir -p ./dist
+                  cp VERSION ./dist
                   lualatex --output-directory=dist cv.tex
             - persist_to_workspace:
                 # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
@@ -16,6 +17,7 @@ jobs:
                 root: dist
                 # Must be relative path from root
                 paths:
+                    - VERSION
                     - cv.pdf
             
     publish-github-release:
@@ -27,7 +29,10 @@ jobs:
         - run:
             name: "Publish Release on GitHub"
             command: |
-                VERSION=$(cat VERSION)
+                VERSION=$(cat ./artifacts/VERSION)
+                echo ${GITHUB_TOKEN} ${CIRCLE_PROJECT_USERNAME} ${CIRCLE_PROJECT_REPONAME} ${CIRCLE_SHA1} ${VERSION}
+                mv ./artifacts/cv.pdf ./artifacts/cv-${VERSION}.pdf
+                rm ./artifacts/VERSION
                 ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -c ${CIRCLE_SHA1} -delete ${VERSION} ./artifacts/
 workflows:
   version: 2
