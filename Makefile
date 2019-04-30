@@ -10,8 +10,8 @@ all: dist
 
 dist: cv.tex
 	mkdir -p $@
-	tectonic $< -o $@
-	
+	lualatex $< -o $@
+
 clean: 
 	rm -r ./dist
 # end
