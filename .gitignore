@@ -243,4 +243,4 @@ TSWLatexianTemp*
 
 #custom
 /dist
-./.circleci/testci.sh
+/.circleci/testci.sh
