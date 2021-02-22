@@ -1,0 +1,6 @@
+[submodule "vendor/hashclash"]
+	path = vendor/hashclash
+	url = https://github.com/cr-marcstevens/hashclash
+[submodule "vendor/collisions"]
+	path = vendor/collisions
+	url = https://github.com/corkami/collisions

@@ -1,0 +1,17 @@
+name: 'Patch PDF'
+description: 'patch the generated pdf'
+inputs:
+  pdf: 
+    description: 'the pdf filepath'
+    required: true
+    default: 'main.pdf'
+  patched-pdf: 
+    description: 'the patched pdf filepath'
+    required: true
+    default: 'patched-main.pdf'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.pdf }}
+    - ${{ inputs.patched-pdf }}

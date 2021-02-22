@@ -1,17 +1,12 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ProvidesClass{friggeri-cv}[2012/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{lubricy-cv}[2021/02/21 CV class]
 
 \DeclareOption{print}{\def\@cv@print{}}
-\DeclareOption*{%
-  \PassOptionsToClass{\CurrentOption}{article}%
+\DeclareOption*{
+  \PassOptionsToClass{\CurrentOption}{article}
 }
 \ProcessOptions\relax
 \LoadClass{article}
-
 
 %%%%%%%%%%
 % Colors %
@@ -41,6 +36,9 @@
 \definecolor{materialbrown}{HTML}{795548}
 \definecolor{materialred}{HTML}{FF4436}
 \definecolor{materialorange}{HTML}{FF5722}
+
+
+\definecolor{pblue}{HTML}{0395DE}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -114,11 +112,14 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{30pt}{62pt}\color{header}%
-      {\thinfont #1}{\bodyfont  #2}
+      {\bodyfont #1}{\thinfont  #2}
     };
-    \node [anchor=north] at (name.south) {%
+    \node [anchor=north] (title) at (name.south) {%
       \fontsize{14pt}{24pt}\color{pblue}%
       \bodyfont #3%
+    };
+    \node [right=of title] {%
+      \emph{\today}
     };
   \end{tikzpicture}
   \vspace{0.5cm}
@@ -130,7 +131,8 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % Structure %
 %%%%%%%%%%%%%
 \RequirePackage{parskip}
-
+\RequirePackage{xstring}
+\RequirePackage{xifthen}
 %\newcounter{colorCounter}
 %\def\@sectioncolor#1#2#3{%
 %  {%
@@ -192,16 +194,26 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[5]{%
-  \parbox[t]{2.1cm}{
-  {#1  }\\
-  \hfill{- #2  }}%
-  &\parbox[t]{11.8cm}{%
-    \textbf{#3}%
-    \hfill%
-    {\footnotesize\addfontfeature{Color=pblue} #4}\\%
-    #5\vspace{\parsep}%
-  }\\}
+\newcommand{\entry}[6]{
+  \parbox[t]{2.6cm}{{#1}\hfill-\hfill{#2}}
+  &\parbox[t]{12cm}{
+    \textbf{#3}
+    \hfill{\footnotesize\addfontfeature{Color=pblue} #4}%
+    \ifthenelse{\isempty{#5}}{}{
+      \\#5
+    }
+    \ifthenelse{\isempty{#6}}{}{
+      \begin{flushright}
+        \footnotesize{\skilllist {#6}}
+      \end{flushright}
+		}
+    \vspace{\parsep}
+  }\\
+}
+\RequirePackage{paralist}
+\newcommand{\skilllist}[1] {
+	\begin{inparaitem}[$\checkmark$]{#1}\end{inparaitem}
+}
 
 
 %%%%%%%%%%%%%%
@@ -216,7 +228,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{pblue} ##1}
   }
-  \begin{textblock}{3.6}(2.0, 0.55)
+  \begin{textblock}{3.8}(1.0, 0.55)
   \begin{flushright}
   \obeycr
 }{%
@@ -226,9 +238,46 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \let\section\oldsection
 }
 
+
 %%%%%%%%%%%%%%%%
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=5.3cm,top=2cm,right=1cm,bottom=1.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
+\RequirePackage{afterpage}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+
+\RequirePackage{fontawesome}
+
+\RequirePackage{tikz}
+\usetikzlibrary{mindmap,shadows,positioning}
+
+\RequirePackage{smartdiagram}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.4cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.4cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.2cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.4cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.7,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.7,
+}

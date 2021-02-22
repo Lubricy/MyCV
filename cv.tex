@@ -1,64 +1,15 @@
 %!TEX TS-program = xelatex
-\documentclass[]{friggeri-cv}
-\usepackage{afterpage}
-\usepackage{hyperref}
-\usepackage{color}
-\usepackage{xcolor}
-\usepackage{smartdiagram}
-\usepackage{fontspec}
-% if you want to add fontawesome package
-% you need to compile the tex file with LuaLaTeX
-% References:
-%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
-%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
-\usepackage{fontawesome}
-\usepackage[utf8]{inputenc}
-\usepackage{tikz}
-\usetikzlibrary{mindmap,shadows}
-\hypersetup{
-    pdftitle={},
-    pdfauthor={},
-    pdfsubject={},
-    pdfkeywords={},
-    colorlinks=false,           % no lik border color
-    allbordercolors=white       % white border color for all
-}
-\smartdiagramset{
-    bubble center node font = \footnotesize,
-    bubble node font = \footnotesize,
-    % specifies the minimum size of the bubble center node
-    bubble center node size = 0.4cm,
-    %  specifies the minimum size of the bubbles
-    bubble node size = 0.4cm,
-    % specifies which is the distance among the bubble center node and the other bubbles
-    distance center/other bubbles = 0.2cm,
-    % sets the distance from the text to the border of the bubble center node
-    distance text center bubble = 0.4cm,
-    % set center bubble color
-    bubble center node color = pblue,
-    % define the list of colors usable in the diagram
-    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
-    % sets the opacity at which the bubbles are shown
-    bubble fill opacity = 0.7,
-    % sets the opacity at which the bubble text is shown
-    bubble text opacity = 0.7,
-}
-
-\RequirePackage{xcolor}
-\definecolor{pblue}{HTML}{0395DE}
+\documentclass[]{lubricy-cv}
+\usepackage{showframe}
 
 \begin{document}
+
 \header{Luke}{Fu}
-      {Senior Software Engineer, Data Scientist}
-\begin{flushright}
-\emph{\today}
-\end{flushright}
-           
-% Fake text to add separator      
+      {Lead Software Engineer, Data Science}
+
 \fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
 ......
 }}
-
 % In the aside, each new line forces a line break
 \begin{aside}
   \section{Address}
@@ -69,7 +20,7 @@
     \faMobile+86 18698609556
     ~
   \section{Mail}
-    \faEnvelopeO\href{mailto:lubricy@outlook.com}{ lubricy\\@outlook.com}
+    \faEnvelopeO\href{mailto:lubricy@outlook.com}{ lubricy@outlook.com}
     ~
   \section{Connection}
     \faTwitter\href{https://twitter.com/LubricyF}{@LubricyF}
@@ -118,6 +69,7 @@
     {Fidelity Business Services (Dalian) LLC.}
     {Designing \& developing software solutions w/ deep learning for business use cases,
       developing frontend webpage and backend services. }
+    {}
 \end{entrylist}
 ~
 \section{Projects}
@@ -126,44 +78,66 @@
     {Apr'19}{Now}
     {Cognitive Conversation Service}
     {Fidelity Business Services (Dalian) LLC.}
-    {Improve PI customer expereience via conversational chatbot.\\
-     NodeJS/Python/Spark }
+    {Improve PI customer expereience via conversational chatbot.}
+    {
+      \item NodeJS
+      \item Python
+      \item Spark }
   \entry
     {Jul'18}{Apr'19}
     {Unstructured data masking system}
     {Fidelity Business Services (Dalian) LLC.}
-    {Protect sensitive information in unstructured data by detect \& mask them with AI models.\\
-     Python/Tensorflow/NLP }
+    {Protect sensitive information in unstructured data by detect \& mask them with AI models.}
+    {
+      \item Python
+      \item Tensorflow
+      \item NLP }
   \entry
     {Jan'18}{Jan'19}
     {Automated candidate screening system}
     {Fidelity Business Services (Dalian) LLC.}
-    {Automated screening candidates by analyze CVs with NLP/AI models.\\
-     Python/Tensorflow/NLP}
+    {Automated screening candidates by analyze CVs with NLP/AI models.}
+    {
+      \item Python
+      \item Tensorflow
+      \item NLP}
   \entry
     {Apr'17}{Jan'18}
     {Bank check recognition system}
     {Fidelity Business Services (Dalian) LLC.}
-    {recognize text information from bank checks with image processing/AI models.\\
-     Python/OpenCV/Tensorflow}
+    {recognize text information from bank checks with image processing/AI models.}
+    {
+      \item Python
+      \item OpenCV
+      \item Tensorflow}
   \entry
     {Jul'17}{Oct'17}
     {Questionare recognition system}
     {Fidelity Business Services (Dalian) LLC.}
-    {recognize marks from questionares with image processing/AI models.\\
-     Python/OpenCV/Tensorflow}
+    {recognize marks from questionares with image processing/AI models.}
+    {
+      \item Python
+      \item OpenCV
+      \item Tensorflow}
   \entry
     {Jul'16}{Apr'17}
     {mobile testing hub}
     {Fidelity Business Services (Dalian) LLC.}
-    {synchonized test automation on IOS/Android mobile devices.\\
-     NodeJS/JavaScript/C++/ObjectiveC/Java}
+    {synchonized test automation on IOS/Android mobile devices.}
+    {
+      \item NodeJS
+      \item JavaScript
+      \item C++
+      \item ObjectiveC
+      \item Java}
   \entry
     {Sept'15}{Jul'16}
     {Netbenefits Mobile}
     {Fidelity Business Services (Dalian) LLC.}
-    {Automated application testing on mobile devices.\\
-     Java/Seleinum}
+    {Automated application testing on mobile devices.}
+    {
+      \item Java
+      \item Seleinum}
 \end{entrylist}
 ~
 \section{Education}
@@ -172,12 +146,12 @@
     {2010}{2014}
     {Bachelor's Degree in Software Engineering}
     {Beijing Institute of Technology}
-    {}
+    {} {}
   \entry
     {2007}{2009}
     {High School Diploma}
     {Dalian Yuming High School}
-    {}
+    {} {}
 \end{entrylist}
 
 \end{document}
