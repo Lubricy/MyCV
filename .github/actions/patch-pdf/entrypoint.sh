@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
-# persudo patch
+PATCHED_PDF="cv-patched-$(date +%Y%m%d).pdf"
 
-cp "$1" "$2"
+# presudo patch
+cp "$1" "$PATCHED_PDF"
+
+echo "::set-output name=pdf::${PATCHED_PDF}"
+

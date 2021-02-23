@@ -31,15 +31,17 @@ jobs:
         id: compile_latex
         uses: xu-cheng/latex-action@master
         with:
-          root_file: main.tex
+          root_file: cv.tex
+          latexmk_use_lualatex: true
           pre_compile: |
             apk add ttf-font-awesome
+            tlmgr update --self
             tlmgr update --all
       - name: Patch PDF
         id: patch_pdf
         uses: ./.github/actions/patch-pdf
         with:
-          pdf: main.pdf
+          pdf: cv.pdf
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

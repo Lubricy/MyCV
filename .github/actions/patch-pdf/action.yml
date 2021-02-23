@@ -5,13 +5,11 @@ inputs:
     description: 'the pdf filepath'
     required: true
     default: 'main.pdf'
-  patched-pdf: 
-    description: 'the patched pdf filepath'
-    required: true
-    default: 'patched-main.pdf'
+  outputs:
+    pdf:
+      description: 'the patched pdf filepath'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.pdf }}
-    - ${{ inputs.patched-pdf }}
