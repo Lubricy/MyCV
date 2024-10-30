@@ -1,0 +1,233 @@
+# metadata
+preferredName:
+  en: Luke
+  cn: 皓
+firstName:
+  en: Hao
+  cn: 皓
+lastName:
+  en: Fu
+  cn: 符
+title:
+  en: Lead Software Engineer
+  cn: 首席软件工程师
+address:
+  city:
+    en: Dalian
+    cn: 大连市
+  province:
+    en: Liaoinng, China
+    cn: 辽宁省
+contact:
+  mobile: (+86) 18698609556
+  email: lubricy@outlook.com
+  social:
+    - type: twitter
+      id: LubricyF
+    - type: github
+      id: Lubricy
+
+# employers
+employers:
+  fidelity: &fidelity
+    en: Fidelity Business Services (Dalian) LLC
+    cn: 富达（大连）商务服务有限公司
+
+# education
+education:
+  - start: 2010/09/01
+    end: 2014/07/01
+    degree:
+      en: Bachelor's Degree in Software Engineering
+      cn: 软件工程 学士
+    institution:
+      en: Beijing Institute of Technology
+      cn: 北京理工大学
+  - start: 2007/09/01
+    end: 2010/07/01
+    degree:
+      en: High School Diploma
+      cn: 高中毕业
+    institution:
+      en: Dalian Yuming High School
+      cn: 大连育明高中
+
+# experience
+experience:
+  - start: 2015/09/01
+    end: 2024/12/01
+    title:
+      en: Lead Software Engineer
+      cn: 首席软件工程师
+    employer: *fidelity
+    description:
+      - en: |
+          Designing \& developing software solutions w/ deep learning for
+          business use cases, developing frontend webpage and backend services.
+        cn: |
+          设计和开发深度学习软件解决方案以应对商业用例，开发前端网页和后端服务。
+  - subsection:
+      en: Vocational
+      cn: 在职
+      experience:
+        - start: 2024/02/01
+          end: 2024/12/01
+          title:
+            en: Fidelity Local AI
+            cn: 本地人工智能平台
+            note_cn: true
+          employer: *fidelity
+          description:
+            - en: |
+                Design and Development of the LLM Application
+              cn: |
+                "LLM应用程序的设计和开发"
+          skills:
+            items:
+              - Kubernetes
+              - Python
+              - ArgoCD
+        - start: 2019/04/01
+          end: 2024/02/01
+          title:
+            en: Cognitive Conversation Platform
+            cn: 认知对话平台
+            note_cn: true
+          employer: *fidelity
+          description:
+            - en: |
+                Improve PI customer experience via conversational chatbot.
+              cn: |
+                开发对话式聊天机器人，提高PI客户体验。
+          skills:
+            items:
+              - NodeJS
+              - Python
+              - Spark
+        - start: 2020/04/01
+          end: 2024/12/01
+          title:
+            en: Fidelity Center of Applied Technology
+            cn: 富达创新科技中心
+            note_cn: true
+          employer: *fidelity
+          description:
+            - en: |
+                Crypto currency information gathering system.
+              cn: |
+                加密货币信息收集系统。
+          skills:
+            items:
+              - Python
+              - Airflow
+              - PostgreSQL
+        - start: 2018/07/01
+          end: 2019/04/01
+          title:
+            en: Unstructured data masking system
+            cn: 非结构化数据脱敏系统
+          employer: *fidelity
+          description:
+            - en: |
+                Protect sensitive information in unstructured data by detect \& mask them with AI models.
+              cn: |
+                在非结构化数据中通过人工智能模型检测和保护敏感信息。
+          skills:
+            items:
+              - Python
+              - Tensorflow
+              - NLP
+        - start: 2018/01/01
+          end: 2019/01/01
+          title:
+            en: Automated candidate screening system
+            cn: 自动化候选人筛选系统
+          employer: *fidelity
+          description:
+            - en: |
+                Automated screening candidates by analyze CVs with NLP/AI models.
+              cn: |
+                通过NLP/AI模型分析简历，自动化筛选候选人。
+          skills:
+            items:
+              - Python
+              - Tensorflow
+              - NLP
+        - start: 2017/04/01
+          end: 2018/01/01
+          title:
+            en: Bank check recognition system
+            cn: 银行支票识别系统
+          employer: *fidelity
+          description:
+            - en: |
+                recognize text information from bank checks with image processing/AI models.
+              cn: |
+                通过图像处理/AI模型，识别和提取银行支票中的文本信息。
+          skills:
+            items:
+              - Python
+              - OpenCV
+              - Tensorflow
+        - start: 2017/07/01
+          end: 2017/10/01
+          title:
+            en: Questionnaire recognition system
+            cn: 调查问卷分析系统
+          employer: *fidelity
+          description:
+            - en: |
+                recognize marks from questionnaires with image processing/AI models.
+              cn: |
+                通过图像处理/AI模型，识别和提取调查问卷中的相关信息。
+          skills:
+            items:
+              - Python
+              - OpenCV
+              - Tensorflow
+        - start: 2016/07/01
+          end: 2017/04/01
+          title:
+            en: mobile testing hub
+            cn: 手机测试云平台
+            note_cn: true
+          employer: *fidelity
+          description:
+            - en: |
+                synchronized test automation on IOS/Android mobile devices.
+              cn: |
+                使用平台相关技术，自动化同步测试iOS/Android设备。
+          skills:
+            items:
+              - NodeJS
+              - JavaScript
+              - C++
+              - ObjectiveC
+              - Java
+        - start: 2015/09/01
+          end: 2016/07/01
+          title:
+            en: Netbenefits{{\textregistered}} Mobile
+            cn: Netbenefits{{\textregistered}}手机应用
+          employer: *fidelity
+          description:
+            - en: |
+                Automated application testing on mobile devices.
+              cn: |
+                自动化手机设备上的应用程序测试。
+          skills:
+            items:
+              - Java
+              - Seleinum
+  - subsection:
+      en: Misc
+      cn: 业余
+      experience: []
+
+# patent
+patents:
+  - date: 2024/02/01
+    id: US-11907673-B1
+    title:
+      en: Enhancing chatbot recognition of user intent through graph analysis
+      cn: 使用图论分析增强聊天机器人识别用户意图的能力

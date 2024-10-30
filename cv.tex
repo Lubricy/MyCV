@@ -1,174 +1,27 @@
-%!TEX TS-program = lualatex
-\documentclass[]{lubricy-cv}
-
+\documentclass{moderncv}
+%\documentclass{article}
+\usepackage{datetime}
+% style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvstyle{classic}
+% color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvcolor{green}
+\usepackage[scale=0.85]{geometry}
+% language specific \input
+% see also:
+% https://github.com/novoid/LaTeX-CV-template
+% https://tex.stackexchange.com/a/323964
+\input{utils/date}
+\newcommand{\langFile}{lang/\suffix{\jobname}}
+\expandafter\input\langFile
+% list of languages. need to be defined at lang/
+\newcommand{\en}[1]{\opt{en}{#1}}
+\newcommand{\cn}[1]{\opt{cn}{#1}}
+\newcommand{\daterange}[2]{\dateprefix\thedate{#1}\linebreak[4]\datedelimiter\thedate{#2}}
+%\input{sections/diagrams}
+\input{sections/metadata}
 \begin{document}
-
-\header{Luke}{Fu}
-      {Lead Software Engineer, Data Science}
-
-\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
-......
-}}
-% In the aside, each new line forces a line break
-\begin{aside}
-  \section{Address}
-    Dalian
-    Liaoning, China
-    ~
-  \section{Tel}
-    \faMobile+86 18698609556
-    ~
-  \section{Mail}
-    \faEnvelopeO\href{mailto:lubricy@outlook.com}{ lubricy@outlook.com}
-    ~
-  \section{Connection}
-    \faTwitter\href{https://twitter.com/LubricyF}{@LubricyF}
-    \faGithub\href{https://github.com/Lubricy}{Lubricy}
-    ~
-  % use  \hspace{} or \vspace{} to change bubble size, if needed
-  \section{Programming}
-    \smartdiagram[bubble diagram]{
-        \textbf{Python},
-        \textbf{Bash},
-        \textbf{HTML/CSS}\\\textbf{Angular},
-        \textbf{NodeJS},
-        \textbf{C/C++},
-        \textbf{\LaTeX},
-        \textbf{Haskell},
-        \textbf{Tensorflow}
-    }
-    ~
-  \section{Personal Skills}
-    \smartdiagram[bubble diagram]{
-        \textbf{Team}\\\textbf{Player},
-        \textbf{Initiative},
-        \textbf{Curiosity},
-        \textbf{Problem}\\\textbf{Solving},
-        \textbf{\vspace{2mm}Manage\vspace{2mm}},
-        \textbf{Organize}
-    }
-    ~
-  \section{OS Preference}
-    \textbf{GNU/Linux}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{MacOS}\includegraphics[scale=0.40]{img/4stars.png}
-    \textbf{Unix}\includegraphics[scale=0.40]{img/2stars.png}
-    \textbf{Windows}\includegraphics[scale=0.40]{img/1stars.png}
-    ~
-  \section{Languages}
-    \textbf{Chinese}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{English}\includegraphics[scale=0.40]{img/4stars.png}
-    ~
-\end{aside}
-~
-\section{Experience}
-\begin{entrylist}
-  \entry
-    {Sept'15}{Now}
-    {Lead Software Engineer}
-    {Fidelity Business Services (Dalian) LLC.}
-    {Designing \& developing software solutions w/ deep learning for business use cases,
-      developing frontend webpage and backend services. }
-    {}
-\end{entrylist}
-~
-\section{Projects}
-\begin{entrylist}
-  \entry
-    {Apr'19}{Now}
-    {Cognitive Conversation Service}
-    {Fidelity Business Services (Dalian) LLC.}
-    {Improve PI customer expereience via conversational chatbot.}
-    {
-      \item NodeJS
-      \item Python
-      \item Spark }
-  \entry
-    {Jan'20}{Jan'21}
-    {Fidelity Center of Applied Technology}
-    {Fidelity Business Services (Dalian) LLC.}
-    {Crypto currency information gathering system.}
-    {
-      \item Python
-      \item Airflow
-      \item PostgreSQL }
-  \entry
-    {Jul'18}{Apr'19}
-    {Unstructured data masking system}
-    {Fidelity Business Services (Dalian) LLC.}
-    {Protect sensitive information in unstructured data by detect \& mask them with AI models.}
-    {
-      \item Python
-      \item Tensorflow
-      \item NLP }
-  \entry
-    {Jan'18}{Jan'19}
-    {Automated candidate screening system}
-    {Fidelity Business Services (Dalian) LLC.}
-    {Automated screening candidates by analyze CVs with NLP/AI models.}
-    {
-      \item Python
-      \item Tensorflow
-      \item NLP}
-  \entry
-    {Apr'17}{Jan'18}
-    {Bank check recognition system}
-    {Fidelity Business Services (Dalian) LLC.}
-    {recognize text information from bank checks with image processing/AI models.}
-    {
-      \item Python
-      \item OpenCV
-      \item Tensorflow}
-  \entry
-    {Jul'17}{Oct'17}
-    {Questionare recognition system}
-    {Fidelity Business Services (Dalian) LLC.}
-    {recognize marks from questionares with image processing/AI models.}
-    {
-      \item Python
-      \item OpenCV
-      \item Tensorflow}
-  \entry
-    {Jul'16}{Apr'17}
-    {mobile testing hub}
-    {Fidelity Business Services (Dalian) LLC.}
-    {synchonized test automation on IOS/Android mobile devices.}
-    {
-      \item NodeJS
-      \item JavaScript
-      \item C++
-      \item ObjectiveC
-      \item Java}
-  \entry
-    {Sept'15}{Jul'16}
-    {Netbenefits Mobile}
-    {Fidelity Business Services (Dalian) LLC.}
-    {Automated application testing on mobile devices.}
-    {
-      \item Java
-      \item Seleinum}
-\end{entrylist}
-~
-\section{Patent}
-\begin{entrylist}
-  \entry
-    {2024}{US-11907673-B1}
-    {Enhancing chatbot recognition of user intent through graph analysis}
-    {}
-    {} {}
-\end{entrylist}
-~
-\section{Education}
-\begin{entrylist}
-  \entry
-    {2010}{2014}
-    {Bachelor's Degree in Software Engineering}
-    {Beijing Institute of Technology}
-    {} {}
-  \entry
-    {2007}{2009}
-    {High School Diploma}
-    {Dalian Yuming High School}
-    {} {}
-\end{entrylist}
-
+\makecvtitle
+\input{sections/experience}
+\input{sections/education}
+\input{sections/patents}
 \end{document}

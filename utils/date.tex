@@ -1,0 +1,10 @@
+\makeatletter
+\newcommand\suffix[1]{\expandafter\suffix@dash#1\@nil}
+\def\suffix@dash#1-#2\@nil{#2}
+\makeatother
+\def\stripzero#1{\expandafter\stripzerohelp#1}
+\def\stripzerohelp#1{\ifx 0#1\expandafter\stripzerohelp\else#1\fi}
+\newcommand{\stripzeros}[1]{\stripzero{#1}}
+\newcommand{\setdate}[1]{%
+	\split@slash#1\@nil%
+}

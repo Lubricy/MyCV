@@ -1,0 +1,84 @@
+{{=<( )>=}}
+\section{\en{Experience}\cn{项目经验}}
+<(#experience)>
+<(^subsection)>
+\cventry{\daterange{<(start)>}{<(end)>}}%
+{%title
+<(#title)>
+	\en{<({en})>}%
+	\cn{<({cn})><(#note_cn)>{\tiny{(<({en})>)}}<(/note_cn)>}%
+<(/title)>
+}
+{%employer
+<(#employer)>
+	\en{<({en})>}%
+	\cn{<({cn})>}%
+<(/employer)>
+}
+{%city
+<(#city)>
+	\en{<({en})>}%
+	\cn{<({cn})>}%
+<(/city)>
+}
+{%nation
+}
+{%description
+<(#description)>
+	\en{<({en})>}%
+	\cn{<({cn})>}%
+<(#skills)>
+	\begin{itemize}
+<(/skills)>
+<(#skills)>
+		\item <({.})>
+<(/skills)>
+<(#skills)>
+	\end{itemize}
+<(/skills)>
+<(/description)>
+}
+<(/subsection)>
+<(#subsection)>
+\subsection{\en{<(en)>}\cn{<(cn)>}}
+<(#experience)>
+\cventry{\daterange{<(start)>}{<(end)>}}%
+{%title
+<(#title)>
+	\en{<({en})>}%
+	\cn{<({cn})><(#note_cn)>{\tiny{(<({en})>)}}<(/note_cn)>}%
+<(/title)>
+}
+{%employer
+<(#employer)>
+	\en{<({en})>}%
+	\cn{<({cn})>}%
+<(/employer)>
+}
+{%city
+<(#city)>
+	\en{<({en})>}%
+	\cn{<({cn})>}%
+<(/city)>
+}
+{%nation
+}
+{%description
+<(#description)>
+	\en{<({en})>}%
+	\cn{<({cn})>}%
+	\newline{}
+<(/description)>
+<(#skills)>
+	\en{Skills:}%
+	\cn{技能：}%
+	\begin{itemize}
+<(#items)>
+		\item <({.})>
+<(/items)>
+	\end{itemize}
+<(/skills)>
+}
+<(/experience)>
+<(/subsection)>
+<(/experience)>
