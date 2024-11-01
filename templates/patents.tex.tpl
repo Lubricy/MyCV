@@ -1,4 +1,5 @@
 {{=<( )>=}}
+\begin{mynopagebreak}
 \section{\en{Patents}\cn{专利}}
 <(#patents)>
 \cventry{\thedate{<(date)>}}%
@@ -6,6 +7,7 @@
 <(#title)>
 \en{<({en})>}%
 \cn{<({cn})>{\tiny{(<({en})>)}}}%
-	<(/title)>
-}{<(id)>}{}{}{}
+<(/title)>
+}{\mbox{<(id)>}}{}{}{}
 <(/patents)>
+\end{mynopagebreak}

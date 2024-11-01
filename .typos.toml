@@ -1,2 +1,4 @@
 [files]
 extend-exclude = ["photo.png", ".gitignore"]
+[default]
+extend-ignore-re = ["(?Rm)^.*(#|//|%+)\\s*spellchecker:disable-line$"]

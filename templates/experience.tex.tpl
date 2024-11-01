@@ -2,81 +2,93 @@
 \section{\en{Experience}\cn{项目经验}}
 <(#experience)>
 <(^subsection)>
-\cventry{\daterange{<(start)>}{<(end)>}}%
+<(#start)>
+\cventry{%
+<(#end)>
+\daterange{<(start)>}{<(end)>}%
+<(/end)>
+<(^end)>
+\datetilnow{<(start)>}%
+<(/end)>
+}
+<(/start)>
 {%title
 <(#title)>
-	\en{<({en})>}%
-	\cn{<({cn})><(#note_cn)>{\tiny{(<({en})>)}}<(/note_cn)>}%
+\en{<({en})>}%
+\cn{<({cn})><(#note_cn)>{\tiny{(<({en})>)}}<(/note_cn)>}%
 <(/title)>
 }
 {%employer
 <(#employer)>
-	\en{<({en})>}%
-	\cn{<({cn})>}%
+\en{<({en})>}%
+\cn{<({cn})>}%
 <(/employer)>
 }
 {%city
 <(#city)>
-	\en{<({en})>}%
-	\cn{<({cn})>}%
+\en{<({en})>}%
+\cn{<({cn})>}%
 <(/city)>
 }
 {%nation
 }
 {%description
 <(#description)>
-	\en{<({en})>}%
-	\cn{<({cn})>}%
-<(#skills)>
-	\begin{itemize}
-<(/skills)>
-<(#skills)>
-		\item <({.})>
-<(/skills)>
-<(#skills)>
-	\end{itemize}
-<(/skills)>
+\en{<({en})>}%
+\cn{<({cn})>}%
 <(/description)>
 }
 <(/subsection)>
 <(#subsection)>
 \subsection{\en{<(en)>}\cn{<(cn)>}}
 <(#experience)>
-\cventry{\daterange{<(start)>}{<(end)>}}%
+<(#start)>
+\cventry{%
+<(#end)>
+\daterange{<(start)>}{<(end)>}%
+<(/end)>
+<(^end)>
+\datetilnow{<(start)>}%
+<(/end)>
+}
+<(/start)>
 {%title
 <(#title)>
-	\en{<({en})>}%
-	\cn{<({cn})><(#note_cn)>{\tiny{(<({en})>)}}<(/note_cn)>}%
+\en{<({en})>}%
+\cn{<({cn})><(#note_cn)>{\tiny{(<({en})>)}}<(/note_cn)>}%
 <(/title)>
 }
 {%employer
 <(#employer)>
-	\en{<({en})>}%
-	\cn{<({cn})>}%
+\en{<({en})>}%
+\cn{<({cn})>}%
 <(/employer)>
+<(#github)>
+\githubsocialsymbol\href{https://github.com/<(github)>}{<(github)>}%
+<(/github)>
 }
 {%city
 <(#city)>
-	\en{<({en})>}%
-	\cn{<({cn})>}%
+\en{<({en})>}%
+\cn{<({cn})>}%
 <(/city)>
 }
 {%nation
 }
 {%description
 <(#description)>
-	\en{<({en})>}%
-	\cn{<({cn})>}%
-	\newline{}
+\en{<({en})>}%
+\cn{<({cn})>}%
+\newline{}
 <(/description)>
 <(#skills)>
-	\en{Skills:}%
-	\cn{技能：}%
-	\begin{itemize}
+	%\en{Skills:}%
+	%\cn{技能：}%
+	\begin{inparaitem}
 <(#items)>
 		\item <({.})>
 <(/items)>
-	\end{itemize}
+	\end{inparaitem}
 <(/skills)>
 }
 <(/experience)>

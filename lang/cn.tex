@@ -18,5 +18,9 @@
 }
 \newcommand{\dateprefix}{}%
 \newcommand{\datedelimiter}{{\tiny{至}}}
-\AtBeginDocument{\setlength{\hintscolumnwidth}{2.8cm}}
+\newcommand{\datenow}{{\tiny{今}}}
+\AtBeginDocument{\settowidth{\hintscolumnwidth}{\datedelimiter9999年99月}}
+\newcommand{\yr}[1]{
+	#1年%
+}
 }

@@ -28,6 +28,13 @@
 	}
 	\newcommand{\dateprefix}{{\tiny{from }}}%
 	\newcommand{\datedelimiter}{{\tiny{to }}}%
-	\AtBeginDocument{\setlength{\hintscolumnwidth}{2.5cm}}
-
+	\newcommand{\datenow}{Now}
+	\AtBeginDocument{\settowidth{\hintscolumnwidth}{{\dateprefix}Dec, 9999}}
+	\newcommand{\yr}[1]{
+		\ifnum#1=1
+			1 year%
+		\else
+			#1 years%
+		\fi
+	}
 }

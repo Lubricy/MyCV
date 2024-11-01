@@ -1,6 +1,7 @@
 \documentclass{moderncv}
-%\documentclass{article}
-\usepackage{datetime}
+\usepackage{smartdiagram}
+\usepackage{paralist}
+\usepackage{multicol}
 % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvstyle{classic}
 % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
@@ -17,11 +18,19 @@
 \newcommand{\en}[1]{\opt{en}{#1}}
 \newcommand{\cn}[1]{\opt{cn}{#1}}
 \newcommand{\daterange}[2]{\dateprefix\thedate{#1}\linebreak[4]\datedelimiter\thedate{#2}}
-%\input{sections/diagrams}
+\newcommand{\datetilnow}[1]{\dateprefix\thedate{#1}\linebreak[4]\datedelimiter\datenow}
 \input{sections/metadata}
 \begin{document}
 \makecvtitle
 \input{sections/experience}
 \input{sections/education}
 \input{sections/patents}
+\begin{multicols}{2}
+	\setlength{\maincolumnwidth}{\linewidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}
+	\input{sections/skills}
+	\columnbreak
+	\settowidth{\hintscolumnwidth}{\cvskill{5}}
+	\input{sections/languages}
+	% \input{sections/diagrams}
+\end{multicols}
 \end{document}

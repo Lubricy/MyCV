@@ -8,3 +8,8 @@
 \newcommand{\setdate}[1]{%
 	\split@slash#1\@nil%
 }
+\newenvironment{mynopagebreak}%
+{\par\nobreak\vfil\penalty0\vfilneg
+	\vtop\bgroup}%
+{\par\xdef\tpd{\the\prevdepth}\egroup
+	\prevdepth=\tpd}

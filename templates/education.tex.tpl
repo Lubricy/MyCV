@@ -1,4 +1,5 @@
 {{=<( )>=}}
+\begin{mynopagebreak}
 \section{\en{Education}\cn{学历}}
 <(#education)>
 \cventry{\daterange{<(start)>}{<(end)>}}%
@@ -20,3 +21,4 @@
   <(/city)>
 }{}{}  % arguments 3 to 6 can be left empty
 <(/education)>
+\end{mynopagebreak}

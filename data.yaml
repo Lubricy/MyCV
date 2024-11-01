@@ -18,6 +18,54 @@ address:
   province:
     en: Liaoinng, China
     cn: 辽宁省
+languages:
+  items:
+    - name:
+        en: Chinese (Mandarin)
+        cn: 汉语
+      level:
+        en: Native
+        cn: 母语
+        rate: 5
+    - name:
+        en: English
+        cn: 英语
+      level:
+        en: Fluent
+        cn: 流利
+        rate: 4
+    - name:
+        en: Japanese
+        cn: 日语
+      level:
+        en: Basic
+        cn: 基础
+        rate: 1
+
+skills:
+  items:
+    - name: Python
+      exp_year: 7
+      rate: 5
+    - name: NodeJS
+      exp_year: 6
+      rate: 5
+    - name: AWS
+      exp_year: 3
+      rate: 4
+    - name: Kubernetes
+      exp_year: 2
+      rate: 4
+    - name: Bash
+      exp_year: 10
+      rate: 5
+    - name: Java
+      exp_year: 2
+      rate: 3
+    - name: Haskell
+      exp_year: 1
+      rate: 2
+
 contact:
   mobile: (+86) 18698609556
   email: lubricy@outlook.com
@@ -43,19 +91,18 @@ education:
     institution:
       en: Beijing Institute of Technology
       cn: 北京理工大学
-  - start: 2007/09/01
-    end: 2010/07/01
-    degree:
-      en: High School Diploma
-      cn: 高中毕业
-    institution:
-      en: Dalian Yuming High School
-      cn: 大连育明高中
+  # - start: 2007/09/01
+  #   end: 2010/07/01
+  #   degree:
+  #     en: High School Diploma
+  #     cn: 高中毕业
+  #   institution:
+  #     en: Dalian Yuming High School
+  #     cn: 大连育明高中
 
 # experience
 experience:
   - start: 2015/09/01
-    end: 2024/12/01
     title:
       en: Lead Software Engineer
       cn: 首席软件工程师
@@ -81,7 +128,7 @@ experience:
             - en: |
                 Design and Development of the LLM Application
               cn: |
-                "LLM应用程序的设计和开发"
+                设计和开发供公司内部使用的LLM应用程序
           skills:
             items:
               - Kubernetes
@@ -222,7 +269,38 @@ experience:
   - subsection:
       en: Misc
       cn: 业余
-      experience: []
+      experience:
+        - start: 2017/01/08
+          title:
+            en: Personal Dotfiles
+            cn: 个人配置文件
+            note_cn: true
+          github: Lubricy/dotfiles
+          description:
+            - en: |
+                Personal configurations for Shell, Emacs \& more.
+              cn: |
+                用于Shell，Emacs等的个人Linux配置。
+          skills:
+            items:
+              - Bash
+              - Emacs Lisp
+              - Nix
+        - start: 2019/04/30
+          title:
+            en: LaTeX CV Template
+            cn: LaTeX 简历模版
+          github: Lubricy/MyCV
+          description:
+            - en: |
+                Build {\LaTeX} pdf from yaml with moderncv
+              cn: |
+                使用 \LaTeX 模版从 yaml 文件生成简历
+          skills:
+            items:
+              - \LaTeX{}
+              - mustache
+              - GitHub Actions
 
 # patent
 patents:
