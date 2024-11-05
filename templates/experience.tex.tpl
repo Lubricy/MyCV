@@ -40,6 +40,9 @@
 }
 <(/subsection)>
 <(#subsection)>
+<(^breakable)>
+\begin{mynopagebreak}
+<(/breakable)>
 \subsection{\en{<(en)>}\cn{<(cn)>}}
 <(#experience)>
 <(#start)>
@@ -92,5 +95,8 @@
 <(/skills)>
 }
 <(/experience)>
+<(^breakable)>
+\end{mynopagebreak}
+<(/breakable)>
 <(/subsection)>
 <(/experience)>

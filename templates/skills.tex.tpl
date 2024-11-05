@@ -10,9 +10,9 @@
 \cn{<(name)>}%
 }
 {%
-<(#exp_year)>
-\yr{<(exp_year)>}%
-<(/exp_year)>
+%<(#exp_year)>
+%\yr{<(exp_year)>}%
+%<(/exp_year)>
 }
 <(/items)>
 <(/skills)>

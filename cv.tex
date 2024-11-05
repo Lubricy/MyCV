@@ -22,15 +22,20 @@
 \input{sections/metadata}
 \begin{document}
 \makecvtitle
+% TODO: refactor the hardcoded value
+\vspace{-1cm}
 \input{sections/experience}
 \input{sections/education}
 \input{sections/patents}
-\begin{multicols}{2}
-	\setlength{\maincolumnwidth}{\linewidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}
-	\input{sections/skills}
-	\columnbreak
-	\settowidth{\hintscolumnwidth}{\cvskill{5}}
-	\input{sections/languages}
-	% \input{sections/diagrams}
-\end{multicols}
+\input{sections/certificates}
+\begin{mynopagebreak}
+	\begin{multicols}{2}
+		\setlength{\maincolumnwidth}{\linewidth-\leftskip-\rightskip-\separatorcolumnwidth-\hintscolumnwidth}
+		\input{sections/skills}
+		\columnbreak
+		\settowidth{\hintscolumnwidth}{\cvskill{5}}
+		\input{sections/languages}
+		% \input{sections/diagrams}
+	\end{multicols}
+\end{mynopagebreak}
 \end{document}

@@ -62,6 +62,12 @@ skills:
     - name: Java
       exp_year: 2
       rate: 3
+    - name: C/C++
+      exp_year: 1
+      rate: 2
+    - name: C\#
+      exp_year: 1
+      rate: 2
     - name: Haskell
       exp_year: 1
       rate: 2
@@ -88,17 +94,17 @@ education:
     degree:
       en: Bachelor's Degree in Software Engineering
       cn: 软件工程 学士
-    institution:
+    institution: &bit
       en: Beijing Institute of Technology
       cn: 北京理工大学
-  # - start: 2007/09/01
-  #   end: 2010/07/01
-  #   degree:
-  #     en: High School Diploma
-  #     cn: 高中毕业
-  #   institution:
-  #     en: Dalian Yuming High School
-  #     cn: 大连育明高中
+  - start: 2007/09/01
+    end: 2010/07/01
+    degree:
+      en: High School Diploma
+      cn: 高中毕业
+    institution:
+      en: Dalian Yuming High School
+      cn: 大连育明高中
 
 # experience
 experience:
@@ -109,13 +115,14 @@ experience:
     employer: *fidelity
     description:
       - en: |
-          Designing \& developing software solutions w/ deep learning for
+          Designing \& developing software solutions with deep learning for
           business use cases, developing frontend webpage and backend services.
         cn: |
           设计和开发深度学习软件解决方案以应对商业用例，开发前端网页和后端服务。
   - subsection:
-      en: Vocational
+      en: Perfessional
       cn: 在职
+      breakable: true
       experience:
         - start: 2024/02/01
           end: 2024/12/01
@@ -126,9 +133,13 @@ experience:
           employer: *fidelity
           description:
             - en: |
-                Design and Development of the LLM Application
+                Spearheaded the Fidelity Local AI project, independently
+                executing the architecture design and deployment of the LLM application for
+                internal company use. Leveraged open-source applications and
+                utilized Kubernetes, Python, and ArgoCD extensively in the
+                process.
               cn: |
-                设计和开发供公司内部使用的LLM应用程序
+                领导了本地人工智能平台项目，独立执行LLM应用程序架构的设计和部署，专为公司内部使用。
           skills:
             items:
               - Kubernetes
@@ -143,16 +154,21 @@ experience:
           employer: *fidelity
           description:
             - en: |
-                Improve PI customer experience via conversational chatbot.
+                Led ontribute to the Cognitive Conversation Platform project by developing
+                conversation services and data providers, crafting machine learning pipelines
+                and establishing continuous integration (CI) pipelines. This step significantly
+                enhanced the Personal Investing (PI) customer experience with a chatbot.
               cn: |
-                开发对话式聊天机器人，提高PI客户体验。
+                开发对话服务和数据提供模块，构造机器学习流程并建立持续集成
+                (CI)流程，为认知对话平台项目做出了贡献。这一步显著地通过聊天机器
+                人提升了个人投资(PI)客户体验。
           skills:
             items:
               - NodeJS
               - Python
               - Spark
         - start: 2020/04/01
-          end: 2024/12/01
+          end: 2021/03/01
           title:
             en: Fidelity Center of Applied Technology
             cn: 富达创新科技中心
@@ -160,9 +176,9 @@ experience:
           employer: *fidelity
           description:
             - en: |
-                Crypto currency information gathering system.
+                Engaged in the Fidelity Center of Applied Technology project, developing a Cryptocurrency Information Gathering System. This system was primarily designed with Python, and integrated with Airflow for workflow management and PostgreSQL for database handling.
               cn: |
-                加密货币信息收集系统。
+                参与了富达创新科技中心项目，开发一种加密货币信息收集系统。该系统主要使用Python设计，并整合了Airflow进行工作流管理和PostgreSQL进行数据库操作。
           skills:
             items:
               - Python
@@ -176,9 +192,14 @@ experience:
           employer: *fidelity
           description:
             - en: |
-                Protect sensitive information in unstructured data by detect \& mask them with AI models.
+                worked on Unstructured Data Masking System. The primary
+                objective was to protect sensitive information in unstructured
+                data. This was achieved by detecting and masking it using AI
+                models, specifically in Python, Tensorflow, and NLP.
               cn: |
-                在非结构化数据中通过人工智能模型检测和保护敏感信息。
+                非结构化数据脱敏系统项目。主要目标是保护非结构化数据中的敏感信息。
+                我们通过使用人工智能模型（特别是Python，Tensorflow和NLP）来检测
+                和保护这些信息。
           skills:
             items:
               - Python
@@ -192,9 +213,14 @@ experience:
           employer: *fidelity
           description:
             - en: |
-                Automated screening candidates by analyze CVs with NLP/AI models.
+                contributed to the development of an Automated Candidate
+                Screening System. My role involved using Python and TensorFlow
+                to implement NLP/AI models that can analyze resumes, leading to
+                a sophisticated approach to candidate selection.
               cn: |
-                通过NLP/AI模型分析简历，自动化筛选候选人。
+                参与了自动化候选人筛选系统的开发。我的角色包括使用Python和
+                TensorFlow实现可以分析简历的NLP/AI模型，从而实现对候选人选择的精
+                细化方法。
           skills:
             items:
               - Python
@@ -208,9 +234,12 @@ experience:
           employer: *fidelity
           description:
             - en: |
-                recognize text information from bank checks with image processing/AI models.
+                Implemented a bank check recognition system utilizing image processing and artificial intelligence models. The project involved
+                Developing algorithms to recognize and extract text information from bank checks.
+                Leveraging skills in Python, OpenCV, and TensorFlow to attain high accuracy in recognition.
               cn: |
-                通过图像处理/AI模型，识别和提取银行支票中的文本信息。
+                实施了一个利用图像处理和人工智能模型的银行支票识别系统，项目包括开发算法来识别和提取银行支票上的文本信息。
+                利用 Python，OpenCV，和 TensorFlow 等技术达到较高的识别准确度。
           skills:
             items:
               - Python
@@ -224,9 +253,16 @@ experience:
           employer: *fidelity
           description:
             - en: |
-                recognize marks from questionnaires with image processing/AI models.
+                Engaged in the design and implementation of a Questionnaire
+                Recognition System. Utilized advanced image processing and AI
+                models to accurately recognize and extract relevant information
+                from questionnaires, improving operational efficiency. The
+                project played a crucial role in facilitating data-driven
+                strategies based on customer responses.
               cn: |
-                通过图像处理/AI模型，识别和提取调查问卷中的相关信息。
+                在此项目中参与调查问卷分析系统的设计与实施。利用先进的图像处理和
+                AI模型，准确识别并提取调查问卷中的相关信息，提高了作业效率。此项
+                目在基于客户反馈进行数据驱动策略的过程中发挥了关键作用。
           skills:
             items:
               - Python
@@ -241,9 +277,12 @@ experience:
           employer: *fidelity
           description:
             - en: |
-                synchronized test automation on IOS/Android mobile devices.
+                Engineered a synchronized test automation framework for native iOS/Android devices,
+                controls multiple devices at the same time from an intuitive web UI.
+                resulting in enhanced bug identification and resolution which significantly boosted team productivity.
               cn: |
-                使用平台相关技术，自动化同步测试iOS/Android设备。
+                为原生iOS/Android设备设计了和实现了一个的测试自动化框架，从网页端同步控制多台设备，
+                使得漏洞识别和解决效率大大提高，从而显著提升了团队的生产力。
           skills:
             items:
               - NodeJS
@@ -251,7 +290,7 @@ experience:
               - C++
               - ObjectiveC
               - Java
-        - start: 2015/09/01
+        - start: 2015/09/22
           end: 2016/07/01
           title:
             en: Netbenefits{{\textregistered}} Mobile
@@ -259,13 +298,52 @@ experience:
           employer: *fidelity
           description:
             - en: |
-                Automated application testing on mobile devices.
+                Developed and executed comprehensive suite of automated test cases for mobile applications utilizing Java, SeeTest and Seleinum, reducing manual testing efforts and identifying critical bugs prior to release, contributing to improved app reliability.
               cn: |
-                自动化手机设备上的应用程序测试。
+                利用 Java, SeeTest 和 Seleinum 开发并执行全套自动化测试案例，减少了手动测试工作量，并在发布前发现了关键的 bug，提高了应用的可靠性。
           skills:
             items:
               - Java
               - Seleinum
+  - subsection:
+      en: Educational
+      cn: 大学
+      experience:
+        - start: 2013/09/01
+          end: 2015/07/01
+          title:
+            en: Robot Football Competition
+            cn: 机器人足球竞赛
+          employer: *bit
+          description:
+            - en: |
+                Led a team in College Robotics Football Competition, where we designed, built, and programmed autonomous robots for a competitive setting. Demonstrated strong teamwork skills, proficiency in robotics design and programming, and strategic planning.
+              cn: |
+                在大学机器人足球比赛中，我带领团队设计、构建和编程自主机器人进行竞技。展示了出色的团队协作技能，对机器人设计和编程的精通，以及策略规划能力。
+          skills:
+            items:
+              - C\#
+              - C++
+        - start: 2012/09/01
+          end: 2013/07/01
+          title:
+            en: Information Security Competition
+            cn: 信息安全竞赛
+          employer: *bit
+          description:
+            - en: |
+                Took part in the National Information Security Competition,
+                working on a project that involved gathering and analyzing
+                information from the Windows OS in order to enhance its
+                protection. Substantial practical experience with both C\# and
+                C++ was acquired during this time.
+              cn: |
+                参加了国家信息安全竞赛，主要工作是收集和分析Windows操作系统的信
+                息以增强其保护能力。此期间，获得了使用C\#和C++的大量实践经验。
+          skills:
+            items:
+              - C\#
+              - C++
   - subsection:
       en: Misc
       cn: 业余
@@ -302,6 +380,12 @@ experience:
               - mustache
               - GitHub Actions
 
+# certificates
+certs:
+  - date: 2023/10/09
+    title:
+      en: Certified Kubernetes Administrator
+      cn: Kubernetes管理员认证
 # patent
 patents:
   - date: 2024/02/01
