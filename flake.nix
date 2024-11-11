@@ -20,6 +20,7 @@
           name = "latex-env";
           paths = with pkgs;[
             mustache-go
+            poppler_utils
             findutils
             texlive.combined.scheme-full
             texlab
@@ -69,10 +70,11 @@
               env TEXMFHOME=.cache TEXMFVAR=.cache/texmf-var \
                 latexmk -interaction=nonstopmode -pdf -xelatex -jobname='%A-cn'\
                 cv.tex
+                pdfunite cv-{en,cn}.pdf cv-merged.pdf
             '';
             installPhase = ''
               mkdir -p $out
-              cp cv-en.pdf cv-cn.pdf $out/
+              cp cv-*.pdf $out/
             '';
           };
         });

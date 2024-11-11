@@ -29,4 +29,5 @@ done
 
 latexmk -interaction=nonstopmode -pdf -xelatex -jobname='./.cache/%A-en' cv.tex
 latexmk -interaction=nonstopmode -pdf -xelatex -jobname='./.cache/%A-cn' cv.tex
-cp --no-preserve=mode,ownership ./.cache/cv-{en,cn}.pdf ./dist && echo build updated.
+pdfunite ./.cache/cv-{en,cn}.pdf ./.cache/cv-merged.pdf
+cp --no-preserve=mode,ownership ./.cache/cv-{en,cn,merged}.pdf ./dist && echo build updated.
